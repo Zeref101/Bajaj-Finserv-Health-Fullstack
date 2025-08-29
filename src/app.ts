@@ -10,8 +10,9 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors);
+app.use(cors());
 app.options("*", cors());
+
 app.use("/bfhl", dataProccessRoute);
 
 app.listen(PORT, () => {
